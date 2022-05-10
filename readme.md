@@ -1,7 +1,7 @@
 # Braess Paradox Environment
 An implementation of the Breaess Paradox for multi-agent reinforcement learning experiments.
 
-[bp-wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Braess_paradox_road_example.svg/500px-Braess_paradox_road_example.svg.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Braess_paradox_road_example.svg/500px-Braess_paradox_road_example.svg.png)
 
 ## About
 Discovered by German mathematician Dietrich Braess in 1968, the paradox (aka The Network Paradox)  is the observations that, counterintuitively, adding a new road to a road network not only may not help but it can actually slow down overall traffic.
