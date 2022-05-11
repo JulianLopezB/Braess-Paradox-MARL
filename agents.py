@@ -1,6 +1,7 @@
 import gym
 import numpy as np
 from random import random
+
 class QAgent():
     ''' 
     Q-Learning algorithm.
@@ -50,7 +51,7 @@ class QAgent():
         return action
 
     def decrement_epsilon(self):
-        
+
         self.epsilon = self.epsilon*self.eps_dec if self.epsilon>self.eps_min\
                        else self.eps_min
 
@@ -68,7 +69,7 @@ class QAgent():
 class SightedQAgent():
     ''' 
     Q-Learning algorithm.
-    Agent see all other agents' positions
+    Agent sees all other agents' positions
 
     '''
     def __init__(self, id_agent, lr, gamma, n_agents, eps_start, eps_end, eps_dec):
