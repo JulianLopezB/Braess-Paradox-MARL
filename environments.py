@@ -9,7 +9,6 @@ class BraessParadoxEnv(gym.Env):
     def __init__(self, n_agents=4000, social_welfare_type='utilitarian'):
         
         #super(BraessParadoxEnv, self).__init__()
-        
         self.n_agents = n_agents
         self.cost_params  = {'c1': -n_agents*4.5/4000, 'c2': -n_agents/400}
         self.social_welfare_type = social_welfare_type
@@ -17,34 +16,25 @@ class BraessParadoxEnv(gym.Env):
     def reset(self):
         
         self.state = {'step': 0}
-        
         for i in range(self.n_agents):
-            
             self.state[i] = 'S'
-            
         self.done = False
         
         return self.state
     
     def step(self, actions):
-        
+
         info = {}
         for i in range(self.n_agents):
-            
             self.state[i] = actions[i]
-            
         if self.state['step'] == 0:
-            
             self.state['step'] = 1
             T =  sum([a=='A' for a in actions])
             rewards = [ T/self.cost_params['c2'] if a=='A' else self.cost_params['c1'] for a in actions]
-            
         else:
-            
             T = sum([a=='B' for a in actions])
             rewards = [self.cost_params['c1'] if a=='A' else T/self.cost_params['c2'] for a in actions]
             self.done = True
-
         rewards = self.social_welfare(rewards)
 
         return self.state, rewards, self.done, info
@@ -55,7 +45,6 @@ class BraessParadoxEnv(gym.Env):
         # Utilitarian Social Welfare
         if self.social_welfare_type == 'utilitarian':
             rewards = [sum(rewards)/(self.n_agents)]*(self.n_agents)
-
         # Rawls Social Welfare
         elif self.social_welfare_type == 'rawlsian':
             rewards = [min(rewards)]*(self.n_agents)
@@ -66,4 +55,5 @@ class BraessParadoxEnv(gym.Env):
         
         # Render the environment to the screen
         pass
+
 
