@@ -14,6 +14,13 @@ from environments import BraessParadoxEnv
 from agents import QAgent
 
 env = BraessParadoxEnv(n_agents=400)
+
+params = {'lr': 0.005, 
+          'gamma': 0.999, 
+          'eps_start': 1.0, 
+          'eps_end': 0.001,
+          'eps_dec': 0.995}
+
 agents = [QAgent(**params, id_agent=i) for i in range(n_agents)]
 
 new_state = env.reset()
