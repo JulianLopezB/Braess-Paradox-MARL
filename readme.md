@@ -14,12 +14,12 @@ from environments import BraessParadoxEnv
 from agents import QAgent
 
 env = BraessParadoxEnv(n_agents=400)
-agents = [QAgent(**params, id_agent=i) for i in tqdm(range(n_agents))]
+agents = [QAgent(**params, id_agent=i) for i in range(n_agents)]
 
 new_state = env.reset()
 
 
-actions = [agents[i].choose_action(new_state) for i in tqdm(range(env.n_agents))]
+actions = [agents[i].choose_action(new_state) for i in range(env.n_agents)]
 
 new_state, rewards, done, info = env.step(actions)
 ```
@@ -34,3 +34,5 @@ while not done:
     actions = [agents[i].choose_action(state) for i in range(n_agents)]
     new_state, rewards, done, info = env.step(actions)
 ```
+
+for more details see this [example](https://github.com/JulianLopezB/Braess-Paradox-MARL/blob/main/notebooks/Braess-Paradox.ipynb)
