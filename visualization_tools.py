@@ -6,6 +6,8 @@ def plot_scores(scores):
         plt.plot([np.mean(scores[x][i-100:i]) for i in range(100, len((scores[x])))])
     plt.show()
 
+
+
 def plot_actions(actions_list):
     n_agents = len(actions_list[0][0])
     plt.plot([[sum([a == 'A' for a in step])/n_agents for step in episode][0] for episode in actions_list], label='Step 1')

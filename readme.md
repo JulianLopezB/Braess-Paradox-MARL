@@ -7,7 +7,21 @@ An implementation of the Breaess Paradox for multi-agent reinforcement learning 
 Discovered by German mathematician Dietrich Braess in 1968, the paradox (aka The Network Paradox)  is the observations that, counterintuitively, adding a new road to a road network not only may not help but it can actually slow down overall traffic.
 This implementation allows to experiment with multi-agent reinforcemnet learning on an environment that emulates the Braess Paradox. 
 
+## The Envioronment
+
+### State Space
+
+### Action Space
+
+### Social Welfares
+
+- Utilitarian
+
+- Rawlsian
+
+
 ## Example usage
+
 Basic usage:
 ```python
 from environments import BraessParadoxEnv
@@ -43,3 +57,23 @@ while not done:
 ```
 
 for more details see this [example](https://github.com/JulianLopezB/Braess-Paradox-MARL/blob/main/notebooks/Braess-Paradox.ipynb)
+
+## Roadmap:
+
+- ### Algorithms (Players):
+-- [X] Q Learning Agent 
+-- [] Policy Gradient
+-- [] Dyna
+-- [] MonteCarlo
+-- [] Sarsa
+-- [] DQN Learning Agent
+-- [] Minimax-Q Learning Agent
+-- [] Correlated-Q Learninh Agent
+-- [] Nash Q-learning Agent
+
+- ### Environment and Metrics
+-- [] Add Price of Anarchy
+
+- ### Tooling
+-- [] Generalize Traffic Networks
+-- [] Tools to render states

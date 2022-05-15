@@ -55,5 +55,3 @@ class BraessParadoxEnv(gym.Env):
         
         # Render the environment to the screen
         pass
-
-
