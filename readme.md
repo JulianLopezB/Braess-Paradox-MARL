@@ -61,19 +61,19 @@ for more details see this [example](https://github.com/JulianLopezB/Braess-Parad
 ## Roadmap:
 
 - ### Algorithms (Players):
--- [X] Q Learning Agent 
--- [] Policy Gradient
--- [] Dyna
--- [] MonteCarlo
--- [] Sarsa
--- [] DQN Learning Agent
--- [] Minimax-Q Learning Agent
--- [] Correlated-Q Learninh Agent
--- [] Nash Q-learning Agent
+- [X] Q Learning Agent 
+- [] Policy Gradient
+- [] Dyna
+- [] MonteCarlo
+- [] Sarsa
+- [] DQN Learning Agent
+- [] Minimax-Q Learning Agent
+- [] Correlated-Q Learninh Agent
+- [] Nash Q-learning Agent
 
 - ### Environment and Metrics
--- [] Add Price of Anarchy
+- [] Add Price of Anarchy
 
 - ### Tooling
--- [] Generalize Traffic Networks
--- [] Tools to render states
+- [] Generalize Traffic Networks
+- [] Tools to render states
