@@ -14,9 +14,9 @@ class BraessParadoxEnv():
 
     def reset(self):
         
-        self.state = {'step': 0, 'actions': {}}
+        self.state = {'step': 0, 'positions': {}}
         for i in range(self.n_agents):
-            self.state['actions'][i] = 'S'
+            self.state['positions'][i] = 'S'
         self.done = False
         
         return self.state
@@ -25,7 +25,7 @@ class BraessParadoxEnv():
 
         info = {}
         for i in range(self.n_agents):
-            self.state['actions'][i] = actions[i]
+            self.state['positions'][i] = actions[i]
         if self.state['step'] == 0:
             self.state['step'] = 1
             T =  sum([a=='A' for a in actions])
